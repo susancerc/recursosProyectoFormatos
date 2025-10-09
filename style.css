@@ -183,5 +183,9 @@ table a {
     background-color: #fff;
     color: #000;
 }
-
-
+.btn-login {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; /* separa el botón de los campos */
+}
