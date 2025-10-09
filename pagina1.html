@@ -6,17 +6,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <nav>...</nav>
-  <div class="section-banner">
-    <h2>Calidad</h2>
-    </div>
-</header>
-<main> 
-  <section class="content"></section>
-
-</section></main>
-    
+  <section class="header">
+    <div class="section-banner">
+</div>
     <nav>
       <a href="index.html"><img src="images/logoblanco.png"></a>
       <div class="nav-links">
@@ -25,12 +17,6 @@
         </ul>
       </div>
     </nav>
-
-    <div class="text-box">
-      <h1></h1>
-    </div>
-    <h2>Documentos disponibles</h2>
-
 <section class="content">
   <div class="table-container">
     <h3>Formatos Subidos</h3>
@@ -45,17 +31,18 @@
       <tbody>
         <!-- formatos -->
         <tr>
-          <td>Ejemplo.pdf</td>
+          <td>Documento.pdf</td>
           <td>12/09/2025</td>
           <td>Calidad</td>
-          <td><a href="#">Ver</a> | <a href="#">Eliminar</a></td>
+          <td><a href="#">Ver</a> | <a href="#">Descargar</a></td> | <a href="#">Eliminar</a>
+          <label for="fileUpload">Subir archivo:</label>
+          <input type="file" id="fileUpload" name="fileUpload">
+          <button type="submit">Subir</button>
+        </form>
         </tr>
       </tbody>
     </table>
   </div>
-</section>
-
-
   </section>
 </body>
 </html>
