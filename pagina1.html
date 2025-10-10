@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calidad - Paperless</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .upload-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .file-info {
+      margin-top: 10px;
+      font-style: italic;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <section class="header">
-    <div class="section-banner">
-</div>
     <nav>
-      <a href="index.html"><img src="images/logoblanco.png"></a>
+      <a href="index.html"><img src="logoblanco.jpg" alt="Logo"></a>
       <div class="nav-links">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="login.html">Salir</a></li>
         </ul>
       </div>
     </nav>
-<section class="content">
-  <div class="table-container">
-    <h3>Formatos Subidos</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre del Formato</th>
-          <th>Fecha</th>
-          <th>Área</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- formatos -->
-        <tr>
-          <td>Documento.pdf</td>
-          <td>12/09/2025</td>
-          <td>Calidad</td>
-          <td><a href="#">Ver</a> | <a href="#">Descargar</a></td> | <a href="#">Eliminar</a>
-          <label for="fileUpload">Subir archivo:</label>
-          <input type="file" id="fileUpload" name="fileUpload">
-          <button type="submit">Subir</button>
-        </form>
-        </tr>
-      </tbody>
-    </table>
-  </div>
   </section>
+
+  <section class="content">
+    <div class="table-container">
+      <h3>Formatos del área de Calidad</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre del Formato</th>
+            <th>Descargar</th>
+            <th>Subir Firmado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Formato de Control de Calidad</td>
+            <td><a href="documentos/Formato_Calidad.pdf" download>Descargar</a></td>
+            <td>
+              <div class="upload-box">
+                <input type="file" id="fileUpload" accept=".pdf,.doc,.jpg,.png">
+                <p class="file-info" id="fileInfo">Ningún archivo seleccionado</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script>
+    // Mostrar nombre del archivo subido
+    const fileUpload = document.getElementById('fileUpload');
+    const fileInfo = document.getElementById('fileInfo');
+
+    fileUpload.addEventListener('change', function() {
+      if (this.files.length > 0) {
+        fileInfo.textContent = `Archivo seleccionado: ${this.files[0].name}`;
+        alert("Archivo subido correctamente (simulado).");
+      } else {
+        fileInfo.textContent = "Ningún archivo seleccionado";
+      }
+    });
+  </script>
 </body>
 </html>
